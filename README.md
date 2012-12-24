@@ -1,4 +1,4 @@
-首先，安装boost和clang，然后直接编译：
+首先，安装boost和g++，然后直接编译：
 
 make -j2
 
