@@ -21,19 +21,27 @@ private:
     write(message);
   }
 
-  void handle_read(msg_t& message){}
+  void handle_read(msg_t& message)
+  {
+  }
 
-  void handle_write(msg_t& message) {
-    write(message); }
+  void handle_write(msg_t& message) 
+  {
+    write(message); 
+  }
 
-  void handle_close(const error_code& error){
-    throw error;}
+  void handle_close()
+  {
+    auto error(error_c());
+    throw error;
+  }
 
   traffic_monitor m0, m1;
 };
 
 int main(int argc, char* argv[]){
-  if (argc != 3){
+  if (argc != 3)
+  {
     std::cerr<< "Usage: client <address> <port>"<< std::endl;
     return 1;
   }

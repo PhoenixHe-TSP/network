@@ -1,4 +1,5 @@
-CXX= g++
+CXX= clang++
+#CXX= distcc
 CXXFLAGS= -std=c++11 -pipe -O2
 LDFLAGS= -lstdc++ -lpthread -lboost_system -lboost_thread
 VPATH= src
